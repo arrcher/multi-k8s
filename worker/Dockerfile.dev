@@ -1,0 +1,14 @@
+FROM node:alpine
+WORKDIR /app
+COPY ./package.json ./
+
+# provided by caller
+ARG proxy_http
+ARG HTTP_PROXY=$proxy_http
+ARG HTTPS_PROXY=$proxy_http
+ARG http_proxy=$proxy_http
+ARG https_proxy=$proxy_http
+
+RUN npm install
+COPY ./ ./
+CMD ["npm", "run", "dev"]
