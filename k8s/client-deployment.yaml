@@ -17,5 +17,3 @@ spec:
           image: arrcher/multi-client
           ports:
             -  containerPort: 3000
-      imagePullSecrets:
-      - name: regcred

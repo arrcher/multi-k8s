@@ -17,5 +17,3 @@ spec:
           image: redis
           ports:
             -  containerPort: 6379
-      imagePullSecrets:
-      - name: regcred
